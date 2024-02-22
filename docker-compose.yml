@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  ckn_daemon:
+    build: .
+    container_name: ckn_daemon
+    volumes:
+      - icicle:/app/logs
+    networks:
+      - icicle
+
+networks:
+  icicle:
+    external: true
+
+volumes:
+  icicle:
+    external: true
